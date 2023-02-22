@@ -1,0 +1,167 @@
+:root {
+  --background-color: #000;
+  --border-color: rgb(255, 255, 255, 0.1);
+  --highlight-color: rgb(255, 255, 255, 0.1);
+}
+
+body {
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0px;
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+a,
+p,
+span {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  color: white;
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .nav-section {
+  height: 65px;
+  padding: 3rem 2rem;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+nav .nav-sub-section {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-sub-section p {
+  opacity: 0;
+}
+
+.nav-sub-section:hover p {
+  opacity: 1;
+  animation: fade 1s linear;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+main {
+  flex-grow: 1;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+main::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+.logo {
+  padding: 3rem 2rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  border: 1px;
+  border-radius: 3rem;
+  padding: 15px 20px;
+  width: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+button p {
+  color: #000;
+  padding-right: 6px;
+  font-weight: 700;
+}
+
+article {
+  padding: 3rem 2rem;
+  height: 100%;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.article-title {
+  font-weight: 700;
+  font-size: 7rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+article:nth-child(2) > .article-title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 5rem;
+  text-align: center;
+}
+
+.article-title > svg {
+  position: absolute;
+}
+
+.article-title:nth-child(1) > svg {
+  top: 70%;
+  left: 0;
+}
+
+.article-title:nth-child(2) > svg {
+  bottom: -80px;
+  left: -5px;
+}
+
+.article-title:nth-child(3) > svg {
+  bottom: 20px;
+  left: 5px;
+}
+
+.article-title:nth-child(2),
+.article-title:nth-child(3) {
+  padding-left: 10px;
+}
+
+.article-description {
+  font-weight: 400;
+  font-size: 1.7rem;
+  margin-bottom: 3rem;
+  line-height: 130%;
+}
+
+.title-wrapper {
+  display: flex;
+}
