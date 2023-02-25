@@ -184,16 +184,8 @@ article {
 
 .article-title {
   font-weight: 700;
-  font-size: 7rem;
-  margin-bottom: 2rem;
-  position: relative;
-}
-
-article:nth-child(2) > .article-title {
-  margin: 0;
-  font-weight: 500;
   font-size: 5rem;
-  text-align: center;
+  position: relative;
 }
 
 .article-title > svg {
@@ -206,13 +198,13 @@ article:nth-child(2) > .article-title {
 }
 
 .article-title:nth-child(2) > svg {
-  bottom: -80px;
-  left: -5px;
+  bottom: -30%;
+  left: 0;
 }
 
 .article-title:nth-child(3) > svg {
-  bottom: 20px;
-  left: 5px;
+  bottom: 10%;
+  left: 0;
 }
 
 .article-title:nth-child(2),
@@ -222,11 +214,60 @@ article:nth-child(2) > .article-title {
 
 .article-description {
   font-weight: 400;
-  font-size: 1.7rem;
+  font-size: 2rem;
   margin-bottom: 3rem;
   line-height: 130%;
 }
 
 .title-wrapper {
   display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 1045px) {
+  .article-title {
+    font-size: 4rem;
+  }
+
+  .article-description {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .article-title {
+    font-size: 3rem;
+  }
+
+  .article-description {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .title-wrapper {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .article-title {
+    font-size: 2rem;
+  }
+
+  .article-description {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .title-wrapper {
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 356px) {
+  .article-title:nth-child(2),
+  .article-title:nth-child(3) {
+    padding-left: 0;
+  }
 }
